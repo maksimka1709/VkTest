@@ -49,8 +49,6 @@ class HomeBotsListModal extends React.Component {
                             key={index}
                             description={bot.desc}
                             before={<Avatar size={40} src={bot.avatar}/>}
-                            onClick={() => openModal('MODAL_PAGE_BOT_INFO')}
-                            asideContent={<Icon24Chevron fill="#528bcc"/>}
                         >
                             {bot.name}
                         </Cell>
