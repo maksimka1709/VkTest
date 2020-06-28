@@ -12,22 +12,22 @@ import Icon24Chevron from '@vkontakte/icons/dist/24/chevron';
 const bots = [
     {
         name: 'Никита Конев',
-        avatar: 'https://sun9-5.userapi.com/X8CeQPwZsa1nzyuPEK7bW0rkUaauvNG0uC4glw/47-qPDtqb7w.jpg',
+        avatar: 'https://sun9-46.userapi.com/c857532/v857532854/25de3/zv-bh73WI_g.jpg?ava=1',
         desc: 'Rivers'
     },
     {
         name: 'Руслан Гаджиев',
-        avatar: 'https://sun9-5.userapi.com/X8CeQPwZsa1nzyuPEK7bW0rkUaauvNG0uC4glw/47-qPDtqb7w.jpg',
+        avatar: 'https://sun9-14.userapi.com/Uebazij-w7YQEVuNoBVzZdMydfZCKXTowhEvCQ/2qQal_YM4IA.jpg?ava=1',
         desc: 'ЧСник'
     },
     {
         name: 'Максим Дёмин',
-        avatar: 'https://sun9-5.userapi.com/X8CeQPwZsa1nzyuPEK7bW0rkUaauvNG0uC4glw/47-qPDtqb7w.jpg',
+        avatar: 'https://sun9-26.userapi.com/c855520/v855520161/21b4cd/AZ2osKzhnL8.jpg?ava=1',
         desc: 'Черный Gangster'
     },
     {
         name: 'Александр Владимиров',
-        avatar: 'https://sun9-5.userapi.com/X8CeQPwZsa1nzyuPEK7bW0rkUaauvNG0uC4glw/47-qPDtqb7w.jpg',
+        avatar: 'https://sun9-2.userapi.com/c850416/v850416844/10a0e1/pAmwHvvkiWU.jpg?ava=1',
         desc: 'developer'
     },
 ];
