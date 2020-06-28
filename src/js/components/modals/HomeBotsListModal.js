@@ -1,67 +1,42 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {openModal} from "../../store/router/actions";
+import {closePopout, goBack, openModal, openPopout, setPage} from '../../store/router/actions';
 
-import {List, Cell, Avatar, ModalPage, ModalPageHeader, PanelHeaderButton, withPlatform, IOS} from "@vkontakte/vkui";
+import {Div, Panel, Alert, Group, Button, PanelHeader} from "@vkontakte/vkui"
 
-import Icon24Dismiss from '@vkontakte/icons/dist/24/dismiss';
-import Icon24Cancel from '@vkontakte/icons/dist/24/cancel';
-import Icon24Chevron from '@vkontakte/icons/dist/24/chevron';
+class HomePanelBase extends React.Component {
 
-const bots = [
-    {
-        name: 'ЧЁРНЫЙ GTARP',
-        avatar: 'https://sun9-5.userapi.com/X8CeQPwZsa1nzyuPEK7bW0rkUaauvNG0uC4glw/47-qPDtqb7w.jpg',
-        desc: 'Основное сообщество'
-    },
-    {
-        name: 'РАЗДАЧИ ОТ ЧЁРНОГО GTARP',
-        avatar: 'https://sun9-5.userapi.com/X8CeQPwZsa1nzyuPEK7bW0rkUaauvNG0uC4glw/47-qPDtqb7w.jpg',
-        desc: 'Раздачи и покупка аккаунтов'
-    },
-];
+    state = {
+        showImg: false
+    };
 
-class HomeBotsListModal extends React.Component {
+    showImg = () => {
+        this.setState({showImg: true});
+    };
+
 
     render() {
-        const {id, onClose, openModal, platform} = this.props;
+        const {id, setPage, withoutEpic} = this.props;
 
         return (
-            <ModalPage
-                id={id}
-                header={
-                    <ModalPageHeader
-                        left={platform !== IOS &&
-                        <PanelHeaderButton onClick={onClose}><Icon24Cancel/></PanelHeaderButton>}
-                        right={platform === IOS &&
-                        <PanelHeaderButton onClick={onClose}><Icon24Dismiss/></PanelHeaderButton>}
-                    >
-                        Наши сообщества
-                    </ModalPageHeader>
-                }
-                onClose={onClose}
-                settlingHeight={80}
-            >
-                <List>
-                    {bots.map((bot, index) => (
-                        <Cell
-                            key={index}
-                            description={bot.desc}
-                            before={<Avatar size={40} src={bot.avatar}/>}
-                        >
-                            {bot.name}
-                        </Cell>
-                    ))}
-                </List>
-            </ModalPage>
+            <Panel id={id}>
+                <PanelHeader>ЧЁРНЫЙ GTA-RP</PanelHeader>
+                <Group>
+                    <Div>
+                        <Button mode="secondary" size="l" stretched={true} onClick={() => this.props.openModal("MODAL_PAGE_BOTS_LIST")}>Наши сообщества</Button>
+                    </Div>
+                </Group>
+            </Panel>
         );
     }
 
 }
 
 const mapDispatchToProps = {
+    setPage,
+    goBack,
     openModal
 };
 
-export default withPlatform(connect(null, mapDispatchToProps)(HomeBotsListModal));
+export default connect(null, mapDispatchToProps)(HomePanelBase);
