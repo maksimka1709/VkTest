@@ -37,7 +37,7 @@ class HomeBotsListModal extends React.Component {
                         right={platform === IOS &&
                         <PanelHeaderButton onClick={onClose}><Icon24Dismiss/></PanelHeaderButton>}
                     >
-                        /appbots на минималках
+                        Наши сообщества
                     </ModalPageHeader>
                 }
                 onClose={onClose}
