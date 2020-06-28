@@ -5,6 +5,8 @@ import {closePopout, goBack, openModal, openPopout, setPage} from '../../store/r
 
 import {Div, Panel, Alert, Group, Button, PanelHeader} from "@vkontakte/vkui"
 
+import testText from './js/components/modals/HomeTextFAQ.js';
+
 class HomePanelBase extends React.Component {
 
     state = {
@@ -30,7 +32,7 @@ class HomePanelBase extends React.Component {
                         <Button mode="secondary" size="l" stretched={true} onClick={() => this.props.openModal('MODAL_PAGE_BOT_INFO')}>Наша команда</Button>
                     </Div>
                     <Div>
-                        <Button mode="secondary" size="l" stretched={true} onClick={() => this.props.openModal('src\js\components\modals\HomeTextFAQ.js')}>FAQ</Button>
+                        <Button mode="secondary" size="l" stretched={true} onClick={() => this.props.openModal('testText')}>FAQ</Button>
                     </Div>
                 </Group>
             </Panel>
