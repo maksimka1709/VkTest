@@ -1,42 +1,69 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {closePopout, goBack, openModal, openPopout, setPage} from '../../store/router/actions';
+import {openModal} from "../../store/router/actions";
 
-import {Div, Panel, Alert, Group, Button, PanelHeader} from "@vkontakte/vkui"
+import {List, Cell, Avatar, ModalPage, ModalPageHeader, PanelHeaderButton, withPlatform, IOS} from "@vkontakte/vkui";
 
-class HomePanelBase extends React.Component {
+import Icon24Dismiss from '@vkontakte/icons/dist/24/dismiss';
+import Icon24Cancel from '@vkontakte/icons/dist/24/cancel';
+import Icon24Chevron from '@vkontakte/icons/dist/24/chevron';
 
-    state = {
-        showImg: false
-    };
+const bots = [
+    {
+        name: 'ЧЁРНЫЙ GTARP',
+        avatar: 'https://sun9-5.userapi.com/X8CeQPwZsa1nzyuPEK7bW0rkUaauvNG0uC4glw/47-qPDtqb7w.jpg',
+        desc: 'Основное сообщество'
+    },
+    {
+        name: 'РАЗДАЧИ ОТ ЧЁРНОГО GTARP',
+        avatar: 'https://sun9-5.userapi.com/X8CeQPwZsa1nzyuPEK7bW0rkUaauvNG0uC4glw/47-qPDtqb7w.jpg',
+        desc: 'Раздачи и покупка аккаунтов.'
+    },
+];
 
-    showImg = () => {
-        this.setState({showImg: true});
-    };
-
+class HomeBotsListModal extends React.Component {
 
     render() {
-        const {id, setPage, withoutEpic} = this.props;
+        const {id, onClose, openModal, platform} = this.props;
 
         return (
-            <Panel id={id}>
-                <PanelHeader>ЧЁРНЫЙ GTA-RP</PanelHeader>
-                <Group>
-                    <Div>
-                        <Button mode="secondary" size="l" stretched={true} onClick={() => this.props.openModal("MODAL_PAGE_BOTS_LIST")}>Наши сообщества</Button>
-                    </Div>
-                </Group>
-            </Panel>
+            <ModalPage
+                id={id}
+                header={
+                    <ModalPageHeader
+                        left={platform !== IOS &&
+                        <PanelHeaderButton onClick={onClose}><Icon24Cancel/></PanelHeaderButton>}
+                        right={platform === IOS &&
+                        <PanelHeaderButton onClick={onClose}><Icon24Dismiss/></PanelHeaderButton>}
+                    >
+                        /appbots на минималках
+                    </ModalPageHeader>
+                }
+                onClose={onClose}
+                settlingHeight={80}
+            >
+                <List>
+                    {bots.map((bot, index) => (
+                        <Cell
+                            key={index}
+                            description={bot.desc}
+                            before={<Avatar size={40} src={bot.avatar}/>}
+                            onClick={() => openModal('MODAL_PAGE_BOT_INFO')}
+                            asideContent={<Icon24Chevron fill="#528bcc"/>}
+                        >
+                            {bot.name}
+                        </Cell>
+                    ))}
+                </List>
+            </ModalPage>
         );
     }
 
 }
 
 const mapDispatchToProps = {
-    setPage,
-    goBack,
     openModal
 };
 
-export default connect(null, mapDispatchToProps)(HomePanelBase);
+export default withPlatform(connect(null, mapDispatchToProps)(HomeBotsListModal));
