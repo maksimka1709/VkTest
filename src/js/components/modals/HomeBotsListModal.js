@@ -11,19 +11,14 @@ import Icon24Chevron from '@vkontakte/icons/dist/24/chevron';
 
 const bots = [
     {
-        name: 'VKS',
-        avatar: 'https://pp.userapi.com/c851520/v851520442/48ce/Sik7V4c58qw.jpg',
-        desc: 'Нет, меня не роняли в детстве'
+        name: 'ЧЁРНЫЙ GTARP',
+        avatar: 'https://sun9-5.userapi.com/X8CeQPwZsa1nzyuPEK7bW0rkUaauvNG0uC4glw/47-qPDtqb7w.jpg',
+        desc: 'Основное сообщество'
     },
     {
-        name: 'Недобот',
-        avatar: 'https://pp.userapi.com/c854420/v854420431/da51/X8ohw4-4Fk4.jpg',
-        desc: 'Я ни разу не пил кокосовое молоко'
-    },
-    {
-        name: 'Realm of War',
-        avatar: 'https://sun9-72.userapi.com/c853520/v853520591/1f167d/avj_z9yFtQA.jpg?ava=1',
-        desc: 'Ненавижу спойлеры.'
+        name: 'РАЗДАЧИ ОТ ЧЁРНОГО GTARP',
+        avatar: 'https://sun9-5.userapi.com/X8CeQPwZsa1nzyuPEK7bW0rkUaauvNG0uC4glw/47-qPDtqb7w.jpg',
+        desc: 'Раздачи и покупка аккаунтов'
     },
 ];
 
@@ -42,7 +37,7 @@ class HomeBotsListModal extends React.Component {
                         right={platform === IOS &&
                         <PanelHeaderButton onClick={onClose}><Icon24Dismiss/></PanelHeaderButton>}
                     >
-                        /appbots на минималках
+                        Наши сообщества
                     </ModalPageHeader>
                 }
                 onClose={onClose}
