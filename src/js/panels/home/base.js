@@ -29,6 +29,9 @@ class HomePanelBase extends React.Component {
                     <Div>
                         <Button mode="secondary" size="l" stretched={true} onClick={() => this.props.openModal('MODAL_PAGE_BOT_INFO')}>Наша команда</Button>
                     </Div>
+                    <Div>
+                        <Button mode="secondary" size="l" stretched={true} onClick={() => this.props.openModal('src\js\components\modals\HomeTextFAQ.js')}>FAQ</Button>
+                    </Div>
                 </Group>
             </Panel>
         );
