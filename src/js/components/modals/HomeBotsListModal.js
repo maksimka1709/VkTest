@@ -18,7 +18,7 @@ const bots = [
     {
         name: 'РАЗДАЧИ ОТ ЧЁРНОГО GTARP',
         avatar: 'https://sun9-64.userapi.com/Qww1fkk2Gpqj1DrACw_MIzhzM13IwKvYUncKAQ/5ivbIpzrUpE.jpg?ava=1',
-        desc: 'Раздачи и покупка аккаунтов.'
+        desc: 'Раздачи и покупка аккаунтов'
     },
 ];
 
