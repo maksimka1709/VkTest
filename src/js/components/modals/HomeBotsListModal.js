@@ -34,6 +34,8 @@ class HomeBotsListModal extends React.Component {
                     <ModalPageHeader
                         left={platform !== IOS &&
                         <PanelHeaderButton onClick={onClose}><Icon24Cancel/></PanelHeaderButton>}
+                        right={platform === IOS &&
+                        <PanelHeaderButton onClick={onClose}><Icon24Dismiss/></PanelHeaderButton>}
                     >
                         Наши сообщества
                     </ModalPageHeader>
@@ -47,7 +49,6 @@ class HomeBotsListModal extends React.Component {
                             key={index}
                             description={bot.desc}
                             before={<Avatar size={40} src={bot.avatar}/>}
-                            asideContent={<Icon24Chevron fill="#528bcc"/>}
                         >
                             {bot.name}
                         </Cell>
