@@ -3,23 +3,10 @@ import {connect} from 'react-redux';
 
 import {closePopout, goBack, openModal, openPopout, setPage} from '../../store/router/actions';
 
-import {Div, Panel, Alert, Group, Button, PanelHeader, View, Header, Cell} from "@vkontakte/vkui"
+import {Div, Panel, Alert, Group, Button, PanelHeader, View, Header, Cell, PanelHeaderButton} from "@vkontakte/vkui"
 import '@vkontakte/vkui/dist/vkui.css';
 
 
-function App () {
-  return (
-    <View activePanel="main">
-      <Panel id="main">
-        <PanelHeader>VKUI</PanelHeader>
-        <Group header={<Header mode="secondary">Items</Header>}>
-          <Cell>Hello</Cell>
-          <Cell>World</Cell>
-        </Group>
-      </Panel>
-    </View>
-  );
-}
 
 class HomePanelBase extends React.Component {
 
@@ -46,7 +33,7 @@ class HomePanelBase extends React.Component {
                         <Button mode="secondary" size="l" stretched={true} onClick={() => this.props.openModal('MODAL_PAGE_BOT_INFO')}>Наша команда</Button>
                     </Div>
                     <Div>
-                        <Button mode="secondary" size="l" stretched={true} onClick={() => App}>FAQ</Button>
+                        <Button mode="secondary" size="l" stretched={true} onClick={() => this.props.openModal('MODAL_TEST_FAQ')}>FAQ</Button>
                     </Div>
                 </Group>
             </Panel>
