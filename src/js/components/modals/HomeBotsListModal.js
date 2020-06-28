@@ -12,12 +12,12 @@ import Icon24Chevron from '@vkontakte/icons/dist/24/chevron';
 const bots = [
     {
         name: 'ЧЁРНЫЙ GTARP',
-        avatar: 'https://sun9-5.userapi.com/X8CeQPwZsa1nzyuPEK7bW0rkUaauvNG0uC4glw/47-qPDtqb7w.jpg',
+        avatar: 'https://sun9-64.userapi.com/Qww1fkk2Gpqj1DrACw_MIzhzM13IwKvYUncKAQ/5ivbIpzrUpE.jpg?ava=1',
         desc: 'Основное сообщество'
     },
     {
         name: 'РАЗДАЧИ ОТ ЧЁРНОГО GTARP',
-        avatar: 'https://sun9-5.userapi.com/X8CeQPwZsa1nzyuPEK7bW0rkUaauvNG0uC4glw/47-qPDtqb7w.jpg',
+        avatar: 'https://sun9-64.userapi.com/Qww1fkk2Gpqj1DrACw_MIzhzM13IwKvYUncKAQ/5ivbIpzrUpE.jpg?ava=1',
         desc: 'Раздачи и покупка аккаунтов.'
     },
 ];
