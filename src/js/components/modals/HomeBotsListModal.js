@@ -34,8 +34,6 @@ class HomeBotsListModal extends React.Component {
                     <ModalPageHeader
                         left={platform !== IOS &&
                         <PanelHeaderButton onClick={onClose}><Icon24Cancel/></PanelHeaderButton>}
-                        right={platform === IOS &&
-                        <PanelHeaderButton onClick={onClose}><Icon24Dismiss/></PanelHeaderButton>}
                     >
                         Наши сообщества
                     </ModalPageHeader>
